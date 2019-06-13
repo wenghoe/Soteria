@@ -137,6 +137,28 @@ ModelImporter:
     4300038: rubbish_01
     4300040: sky
     4300042: wire
+    6400000: back_builds
+    6400002: cars
+    6400004: facade005
+    6400006: facade1
+    6400008: facade2
+    6400010: facade3
+    6400012: facade6
+    6400014: foreground
+    6400016: liana1
+    6400018: Object005
+    6400020: outpost
+    6400022: Plane002
+    6400024: Plane003
+    6400026: Plane004
+    6400028: Plane006
+    6400030: Plane007
+    6400032: posters_grass
+    6400034: road
+    6400036: road_staff
+    6400038: rubbish_01
+    6400040: sky
+    6400042: wire
   externalObjects:
   - first:
       type: UnityEngine:Material
@@ -280,7 +302,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     useSRGBMaterialColor: 1
     importVisibility: 1
     importBlendShapes: 1
