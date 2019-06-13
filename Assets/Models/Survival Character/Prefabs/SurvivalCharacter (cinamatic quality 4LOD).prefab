@@ -6491,6 +6491,7 @@ GameObject:
   - component: {fileID: 205580923309446064}
   - component: {fileID: 6405811942986770086}
   - component: {fileID: 7002713684221903062}
+  - component: {fileID: 211603497841191577}
   m_Layer: 0
   m_Name: SurvivalCharacter (cinamatic quality 4LOD)
   m_TagString: Untagged
@@ -6598,6 +6599,22 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &211603497841191577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1923929060692396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30432de2ef8f4e94f9cf8a96749e31f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Target: {fileID: 0}
+  firingAngle: 45
+  gravity: 9.8
+  Projectile: {fileID: 0}
 --- !u!1 &1927864795778736
 GameObject:
   m_ObjectHideFlags: 0
