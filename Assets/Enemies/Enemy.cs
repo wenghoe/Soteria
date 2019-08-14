@@ -14,7 +14,9 @@ public class Enemy : MonoBehaviour, IDamageable
 
     [SerializeField] GameObject projectileToUse;
     [SerializeField] GameObject projectileSocket;
-    
+
+    [SerializeField] Vector3 aimOffset = new Vector3(0,20f,0);
+
     bool isAttacking = false;
     
     float currentHealthPoints = 100f;
@@ -70,7 +72,7 @@ public class Enemy : MonoBehaviour, IDamageable
         GameObject newProjectile = Instantiate(projectileToUse, projectileSocket.transform.position, Quaternion.identity);
         var projectileComponent = newProjectile.GetComponent<Projectile>();
         projectileComponent.SetDamage(damagePerShot);
-        Vector3 unitVectorToPlayer = (player.transform.position - projectileSocket.transform.position).normalized;
+        Vector3 unitVectorToPlayer = (player.transform.position + aimOffset - projectileSocket.transform.position).normalized;
         float projectileSpeed = projectileComponent.projectileSpeed;
         newProjectile.GetComponent<Rigidbody>().velocity = unitVectorToPlayer * projectileSpeed;
     }

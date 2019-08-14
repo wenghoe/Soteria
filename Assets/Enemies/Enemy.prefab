@@ -1596,10 +1596,12 @@ MonoBehaviour:
   maxHealthPoints: 100
   attackRadius: 100
   damagePerShot: 9
+  secondsBetweenShots: 0.5
   chaseRadius: 80
   projectileToUse: {fileID: 6671543652494889379, guid: bcad8b85e72d2bf4bbac1b84e6ed0fb0,
     type: 3}
   projectileSocket: {fileID: 4447392559039623157}
+  aimOffset: {x: 0, y: 20, z: 0}
 --- !u!195 &180811935
 NavMeshAgent:
   m_ObjectHideFlags: 0
