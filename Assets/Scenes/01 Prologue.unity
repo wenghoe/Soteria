@@ -898,8 +898,7 @@ PrefabInstance:
     - target: {fileID: 13615390, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 3}
       propertyPath: m_Material
       value: 
-      objectReference: {fileID: 13400000, guid: c2815a7ab32e42c4bb42f59caacb8ec1,
-        type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 11469404, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 3}
       propertyPath: m_GroundCheckDistance
       value: 1
@@ -3929,16 +3928,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 510849366, guid: 8686892343dfad44c8827d270238c4c5, type: 3}
-      propertyPath: projectileToUse
-      value: 
-      objectReference: {fileID: 6671543652494889379, guid: bcad8b85e72d2bf4bbac1b84e6ed0fb0,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8686892343dfad44c8827d270238c4c5, type: 3}
 --- !u!1 &1956833748 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 149790, guid: 7737647c22c1fc64a88d5cd030c352ce,
+    type: 3}
+  m_PrefabInstance: {fileID: 326746971}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1956833754 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 408730, guid: 7737647c22c1fc64a88d5cd030c352ce,
     type: 3}
   m_PrefabInstance: {fileID: 326746971}
   m_PrefabAsset: {fileID: 0}
@@ -3956,6 +3956,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealthPoints: 200
   maxSkill1Charge: 100
+  maxFearPoints: 100
 --- !u!1 &1960317894
 GameObject:
   m_ObjectHideFlags: 0
@@ -4100,6 +4101,63 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 3976724393927300245}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2031088773
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2031088774}
+  - component: {fileID: 2031088776}
+  - component: {fileID: 2031088775}
+  m_Layer: 0
+  m_Name: FearSensor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2031088774
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2031088773}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1956833754}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2031088775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2031088773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 932ac4d33612a274b80b4eaa8ec77a48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!135 &2031088776
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2031088773}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 3
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2036318592
 GameObject:
   m_ObjectHideFlags: 0

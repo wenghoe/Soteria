@@ -6,9 +6,11 @@ public class Player : MonoBehaviour, IDamageable
 {
     [SerializeField] float maxHealthPoints = 100f;
     [SerializeField] float maxSkill1Charge = 100f;
+    [SerializeField] float maxFearPoints = 100f;
 
     float currentHealthPoints = 100f;
     float currentSkill1Charge = 40f;
+    float currentFearPoints = 40f;
 
     void Start()
     {
@@ -51,6 +53,12 @@ public class Player : MonoBehaviour, IDamageable
     public void RecoverHealth(float health)
     {
         currentHealthPoints = Mathf.Clamp(currentHealthPoints + health, 0f, maxHealthPoints);
+    }
+
+    public void IncreaseFear(float damage)
+    {
+        currentFearPoints = Mathf.Clamp(currentFearPoints - damage, 0f, maxFearPoints);
+        
     }
 
     IEnumerator RegenerateSkillCharge()
