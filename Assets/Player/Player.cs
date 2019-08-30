@@ -22,7 +22,6 @@ public class Player : MonoBehaviour, IDamageable
         if (Input.GetButtonDown("Skill1") && (currentSkill1Charge == maxSkill1Charge))
         {
             Debug.Log("Skill 1 restored 20HP.");
-            //
             RecoverHealth(20f);
             currentSkill1Charge = 0f;
         }
@@ -44,6 +43,14 @@ public class Player : MonoBehaviour, IDamageable
         }
     }
 
+    public float fearAsPercentage
+    {
+        get
+        {
+            return currentFearPoints / (float)maxFearPoints;
+        }
+    }
+
     public void TakeDamage(float damage)
     {
         currentHealthPoints = Mathf.Clamp(currentHealthPoints - damage, 0f, maxHealthPoints);
@@ -57,8 +64,7 @@ public class Player : MonoBehaviour, IDamageable
 
     public void IncreaseFear(float damage)
     {
-        currentFearPoints = Mathf.Clamp(currentFearPoints - damage, 0f, maxFearPoints);
-        
+        currentFearPoints = Mathf.Clamp(currentFearPoints + damage, 0f, maxFearPoints);
     }
 
     IEnumerator RegenerateSkillCharge()

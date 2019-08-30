@@ -5,19 +5,26 @@ using UnityEngine;
 public class FearSensor : MonoBehaviour
 {
     Player playerComponent;
+    private float timer = 0;
+    float interval = 3f;
+
     void Awake()
     {
         playerComponent = GetComponentInParent<Player>();
     }
     
-
-    void OnTriggerEnter(Collider collider)
+    void OnTriggerStay(Collider collider)
     {
-        bool damageableComponent = collider.gameObject.tag == "Enemy";
-        if (damageableComponent)
+        if (collider.gameObject.tag == "Enemy")
         {
-            Debug.Log("Enemy in range");
-            playerComponent.IncreaseFear(10f);            
+            timer += Time.deltaTime;
+            Debug.Log(timer);
+            if (timer > interval)
+            {
+                playerComponent.IncreaseFear(3f);
+                timer = 0f;
+            }
+            
         }
         
     }
