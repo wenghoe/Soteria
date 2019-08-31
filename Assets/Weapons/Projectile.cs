@@ -8,6 +8,11 @@ public class Projectile : MonoBehaviour
 
     float damageCaused;
 
+    void Start()
+    {
+        FloatingTextController.Initialize();
+    }
+
     public void SetDamage(float damage)
     {
         damageCaused = damage;
@@ -19,6 +24,7 @@ public class Projectile : MonoBehaviour
         if (damageableComponent)
         {
             (damageableComponent as IDamageable).TakeDamage(damageCaused);
+            FloatingTextController.CreateFloatingText(damageCaused.ToString(), transform);
         }
         Destroy(gameObject, 0.01f);
     }
